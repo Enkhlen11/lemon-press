@@ -1,10 +1,13 @@
 import "./app.css";
 import "./container.css";
-
+import "./breakNews.css";
+import "./rowContainer.css";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Container from "./components/container";
 import HeightComponent from "./components/HeightComponent";
+import News from "./components/BreakingNews";
+import RowContainer from "./components/RowContainer";
 
 const cards = [
   {
@@ -44,10 +47,57 @@ const componentArray = [
   },
 ];
 
+const scrollColumn = [
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Нэг тэнгэрт нэг л компани",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Крипто самурай Ньюе-Йоркт",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Сандал ширээний онц байдал",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+];
+
 function App() {
   return (
     <div>
       <Header />
+      <img className="rowImg" src="/rowImg.png" alt="" />
+      <div>
+        <News />
+      </div>
       <div className="flexDiv">
         <Container />
         <div class>
@@ -63,6 +113,11 @@ function App() {
           })}
         </div>
         <HeightComponent />
+      </div>
+      <div className="rowArr">
+        {scrollColumn.map((column) => {
+          return <RowContainer date={column.date} title={column.title} />;
+        })}
       </div>
       <div className="cardsFlex">
         {cards.map((card) => {

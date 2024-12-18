@@ -8,11 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "scripts": "^0.1.0"
   },
   "browserslist": {
     "production": [
@@ -25,5 +25,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": ""
 }

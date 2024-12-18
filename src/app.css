@@ -7,7 +7,6 @@
   width: 355px;
   height: 200px;
   border-radius: 5px;
-  background-color: aqua;
 }
 .blueWord {
   font-size: 12px;
@@ -29,9 +28,8 @@
   padding: 5px 15px 30px 15px;
 }
 .header {
-  height: 50px;
-  background-color: aqua;
   display: flex;
+  margin-bottom: 20px;
 }
 .header img {
   width: 180px;
@@ -47,12 +45,20 @@
 .ikon-button {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.svg {
+  width: 40px;
 }
 .searchButton {
   background-color: blue;
   color: white;
   border-radius: 5px;
+  width: 150px;
+  height: 35px;
 }
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -60,9 +66,20 @@
 /* # components*/
 .flexDiv {
   display: flex;
-  margin: auto;
+  justify-content: center;
 }
 .flexDiv img {
   width: 378px;
   height: 200px;
+}
+.rowImg {
+  width: 950px;
+  height: 110px;
+  margin-bottom: 20px;
+}
+.rowArr {
+  width: 380px;
+  height: 568px;
+  border-radius: 6px;
+  overflow: hidden;
 }
