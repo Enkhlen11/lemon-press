@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Container from "./components/container";
 import HeightComponent from "./components/HeightComponent";
 import News from "./components/BreakingNews";
-import RowContainer from "./components/RowContainer";
+import { RowContainer, PostLink } from "./components/RowContainer";
 
 const cards = [
   {
@@ -88,19 +88,61 @@ const scrollColumn = [
     date: "Wed,04 Dec 202title4 23:00:00 +0000",
     title: "Тэр эргэн ирнэ",
   },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
+  {
+    date: "Wed,04 Dec 202title4 23:00:00 +0000",
+    title: "Тэр эргэн ирнэ",
+  },
 ];
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
-      <img className="rowImg" src="/rowImg.png" alt="" />
+      <div className="rowImg">
+        <img src="/rowImg.png" alt="" />
+      </div>
       <div>
         <News />
       </div>
       <div className="flexDiv">
         <Container />
-        <div class>
+        <div className="plane">
           <img src="/plane.webp" alt="" />
           {componentArray.map((oneObject) => {
             return (
@@ -112,12 +154,26 @@ function App() {
             );
           })}
         </div>
-        <HeightComponent />
       </div>
       <div className="rowArr">
-        {scrollColumn.map((column) => {
-          return <RowContainer date={column.date} title={column.title} />;
-        })}
+        <div className="scrollDiv">
+          {scrollColumn.map((column) => {
+            return <RowContainer date={column.date} title={column.title} />;
+          })}
+        </div>
+        <PostLink />
+
+        <div className="right-kondi">
+          {componentArray.map((oneObject) => {
+            return (
+              <HeightComponent
+                description={oneObject.category}
+                header={oneObject.header}
+                date={oneObject.date}
+              />
+            );
+          })}
+        </div>
       </div>
       <div className="cardsFlex">
         {cards.map((card) => {

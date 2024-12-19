@@ -67,19 +67,46 @@
 .flexDiv {
   display: flex;
   justify-content: center;
+  width: 1000px;
+  margin: auto;
+  gap: 15px;
 }
 .flexDiv img {
   width: 378px;
   height: 200px;
 }
 .rowImg {
-  width: 950px;
   height: 110px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
+.plane {
+  border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px grey;
+}
+/* scroll div */
 .rowArr {
-  width: 380px;
-  height: 568px;
+  width: 1000px;
+  height: 500px;
   border-radius: 6px;
   overflow: hidden;
+  display: flex;
+  gap: 20px;
+  margin: auto;
+  overflow: hidden;
+}
+.right-kondi {
+  width: 350px;
+  height: 500px;
+  border-radius: 5px;
+  border: solid 1px gray;
+}
+.scrollDiv {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: black;
 }

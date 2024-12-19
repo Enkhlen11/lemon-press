@@ -1,4 +1,4 @@
-const RowContainer = (item) => {
+export const RowContainer = (item) => {
   return (
     <div className="titels">
       <p>{item.date}</p>
@@ -6,4 +6,11 @@ const RowContainer = (item) => {
     </div>
   );
 };
-export default RowContainer;
+
+export const PostLink = () => {
+  return (
+    <div className="kondi">
+      <img src="/monkondi.webp" alt="" />
+    </div>
+  );
+};
