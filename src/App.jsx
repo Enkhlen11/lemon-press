@@ -2,12 +2,16 @@ import "./app.css";
 import "./container.css";
 import "./breakNews.css";
 import "./rowContainer.css";
+import "./subscribeCover.css";
+import "./scrollDiv.css";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Container from "./components/container";
 import HeightComponent from "./components/HeightComponent";
 import News from "./components/BreakingNews";
 import { RowContainer, PostLink } from "./components/RowContainer";
+import { Cover } from "./components/SubscribeCover";
+import ScrollSection from "./components/ScrollDiv";
 
 const cards = [
   {
@@ -129,6 +133,48 @@ const scrollColumn = [
     title: "Тэр эргэн ирнэ",
   },
 ];
+const scrollTitle = [
+  {
+    category: "УЛС ТӨР<",
+    header: "Утааны асуудлыг Яндангүй бүс гаргаж шийдэх юм гэнэ",
+    date: "С.Ангирмаа/ 12 сарын 18, 2024",
+  },
+  {
+    category: "ЗАХ ЗЭЭЛ",
+    header: "Өмнөд Солонгосын агаарын тээврийн 2 акул нэгдлээ",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "MINNING 101",
+    header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "БИЗНЕС",
+    header: "Монложистикс групп экспортын тээвэрлэлтээ нэмэгдүүлнэ",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "",
+    header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "САНХҮҮ",
+    header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+  {
+    category: "САНХҮҮ",
+    header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
+    date: "С.Ангирмаа/ 12 сарын 17, 2024",
+  },
+];
 
 function App() {
   return (
@@ -175,6 +221,17 @@ function App() {
           })}
         </div>
       </div>
+      <Cover />
+
+      {scrollTitle.map((columnOne) => {
+        return (
+          <ScrollSection
+            description={columnOne.category}
+            header={columnOne.header}
+            date={columnOne.date}
+          />
+        );
+      })}
       <div className="cardsFlex">
         {cards.map((card) => {
           return (
