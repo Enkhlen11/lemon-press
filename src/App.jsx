@@ -4,7 +4,8 @@ import "./breakNews.css";
 import "./rowContainer.css";
 import "./subscribeCover.css";
 import "./scrollDiv.css";
-import Card from "./components/Card";
+import "./seeMore.css";
+import { Card, CardTitle } from "./components/Card";
 import Header from "./components/Header";
 import Container from "./components/container";
 import HeightComponent from "./components/HeightComponent";
@@ -12,6 +13,8 @@ import News from "./components/BreakingNews";
 import { RowContainer, PostLink } from "./components/RowContainer";
 import { Cover } from "./components/SubscribeCover";
 import ScrollSection from "./components/ScrollDiv";
+import SeeMore from "./components/SeeMore";
+import { PressCardsFlex, CardTitle } from "./components/SecondCards";
 
 const cards = [
   {
@@ -30,6 +33,27 @@ const cards = [
     img: "https://dash-api.yld.mn/api/image/62d20840-42f6-46b9-8797-5cd80c97fac9",
     category: "БИЗНЕС",
     header: "Vans-н орлого 11 дэх сардаа дараалан унасаар",
+    date: "Б.Эмүжин/ 12 сарын 13, 2024",
+  },
+];
+const pressCard = [
+  {
+    img: "https://dash-api.yld.mn/api/image/9150a4b0-5a23-4aba-9080-34a41b67e398",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header:
+      "Fulham клубтэй хамтарсан Adidas брэндийн Mongolia загварууд Монголд",
+    date: "М.Хулан/ 12 сарын 13, 2024",
+  },
+  {
+    img: "monkondi.webp",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header: "Monkondi брэнд Just Chocolate-г зах зээлд нэвтрүүллээ ",
+    date: "С.Ангирмаа/ 12 сарын 18, 2024",
+  },
+  {
+    img: "https://dash-api.yld.mn/api/image/18016e65-ab3a-447d-9469-494c3ee7cffc",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header: "Монгол бартендер дэлхийд өрсөлдлөө ",
     date: "Б.Эмүжин/ 12 сарын 13, 2024",
   },
 ];
@@ -135,7 +159,7 @@ const scrollColumn = [
 ];
 const scrollTitle = [
   {
-    category: "УЛС ТӨР<",
+    category: "УЛС ТӨР",
     header: "Утааны асуудлыг Яндангүй бүс гаргаж шийдэх юм гэнэ",
     date: "С.Ангирмаа/ 12 сарын 18, 2024",
   },
@@ -160,7 +184,7 @@ const scrollTitle = [
     date: "С.Ангирмаа/ 12 сарын 17, 2024",
   },
   {
-    category: "",
+    category: "САНХҮҮ",
     header: "Орон сууцны үнэ иргэдийн орлогоос  2-2.5 дахин үнэтэй байна",
     date: "С.Ангирмаа/ 12 сарын 17, 2024",
   },
@@ -175,6 +199,13 @@ const scrollTitle = [
     date: "С.Ангирмаа/ 12 сарын 17, 2024",
   },
 ];
+// const firstTitle = [
+//   { first: "Бизнес" },
+//   { first: "Хэвлэлийн мэдээ" },
+//   { first: "Эдийн засаг" },
+//   { first: "Олон улс" },
+//   { first: "Сурталчилгаа" },
+// ];
 
 function App() {
   return (
@@ -222,27 +253,43 @@ function App() {
         </div>
       </div>
       <Cover />
+      <div className="flex-section">
+        <div className="all-height">
+          {scrollTitle.map((columnOne) => {
+            return (
+              <ScrollSection
+                description={columnOne.category}
+                header={columnOne.header}
+                date={columnOne.date}
+              />
+            );
+          })}
+        </div>
+        <div></div>
+        <div className="two-img">
+          <img className="coupon" src="./coupon.jpg" alt="" />
+          <img className="k-pop" src="./k-pop.png" alt="" />
+        </div>
+      </div>
+      <SeeMore />
+      <div>
+        <CardTitle />
+        {/* {firstTitle.map((title) => {
+          return <CardTitle about={title.first} />;
+        })} */}
 
-      {scrollTitle.map((columnOne) => {
-        return (
-          <ScrollSection
-            description={columnOne.category}
-            header={columnOne.header}
-            date={columnOne.date}
-          />
-        );
-      })}
-      <div className="cardsFlex">
-        {cards.map((card) => {
-          return (
-            <Card
-              image={card.img}
-              description={card.category}
-              header={card.header}
-              date={card.date}
-            />
-          );
-        })}
+        <div className="cardsFlex">
+          {cards.map((card) => {
+            return (
+              <Card
+                image={card.img}
+                description={card.category}
+                header={card.header}
+                date={card.date}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 const ScrollSection = (title) => {
   return (
-    <div className="">
-      <div className="">
-        <img className="plane" src="./sad.webp" alt="" />
+    <div className="scroll-one-section">
+      <div className="img-section">
+        <img s src="./sad.webp" alt="" />
       </div>
-      <div className="">
-        <p>{title.description}</p>
+      <div className="info">
+        <p className="blue-title">{title.description}</p>
         <h6>{title.header}</h6>
-        <p>{title.date}</p>
+        <p className="date-info">{title.date}</p>
       </div>
     </div>
   );

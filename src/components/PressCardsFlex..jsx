@@ -7,7 +7,7 @@ export const CardTitle = (titleCard) => {
     </div>
   );
 };
-export const Card = (oneCard) => {
+export const SecondCards = (oneCard) => {
   return (
     <div className="card">
       <img src={oneCard.image} alt="" />

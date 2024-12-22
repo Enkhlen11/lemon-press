@@ -1,6 +1,29 @@
-.scroll-section {
+.img-section {
+  width: 320px;
+  height: 180px;
+}
+.img-section img {
+  width: 100%;
+}
+.scroll-one-section {
+  width: 700px;
+  height: 150px;
   display: flex;
-  width: 780px;
-  height: 220px;
-  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+.blue-title {
+  font-size: 14px;
+  color: blue;
+  margin-bottom: 5px;
+}
+.info h6 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.date-info {
+  color: gray;
+  font-size: 12px;
 }

@@ -1,0 +1,17 @@
+.see-more-button {
+  width: 710px;
+  height: 40px;
+  margin: auto;
+  font-weight: 600;
+  background-color: rgb(228, 238, 247);
+  border: none;
+  position: absolute;
+  margin-top: -80px;
+}
+.see-more-button:hover {
+  background-color: rgb(230, 230, 230);
+}
+.scroll-button {
+  width: 1000px;
+  margin: auto;
+}
