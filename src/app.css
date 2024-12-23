@@ -22,7 +22,7 @@
 }
 .imgHeader .blueWord {
   font-size: 12px;
-  color: blue;
+  color: rgb(0, 157, 255);
 }
 .card {
   width: 310px;
@@ -49,6 +49,7 @@
 .header {
   display: flex;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .header img {
   width: 180px;
@@ -68,19 +69,28 @@
   gap: 10px;
 }
 .svg {
-  width: 40px;
+  width: 20px;
+  fill: rgb(41, 41, 41);
+  cursor: pointer;
 }
 .searchButton {
-  background-color: blue;
+  background-color: rgb(0, 64, 212);
   color: white;
   border-radius: 5px;
   width: 150px;
   height: 35px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.searchButton:hover {
+  background-color: rgb(237, 233, 233);
+  color: rgb(164, 162, 162);
 }
 
 .top-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /* # components*/
 .flexDiv {
@@ -99,6 +109,14 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.lemonade-title {
+  width: 1000px;
+  margin: auto;
 }
 .plane {
   border-radius: 5px;

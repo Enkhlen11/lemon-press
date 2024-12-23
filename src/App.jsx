@@ -6,6 +6,7 @@ import "./subscribeCover.css";
 import "./scrollDiv.css";
 import "./seeMore.css";
 import "./pressCardsFlex.css";
+import "./footerSection.css";
 import { Card, CardTitle } from "./components/Card";
 import Header from "./components/Header";
 import Container from "./components/container";
@@ -16,6 +17,7 @@ import { Cover } from "./components/SubscribeCover";
 import ScrollSection from "./components/ScrollDiv";
 import SeeMore from "./components/SeeMore";
 import { PressCards, PressTitle } from "./components/PressCardsFlex.";
+import FooterSection from "./components/FooterSection";
 
 const cards = [
   {
@@ -236,7 +238,7 @@ function App() {
       <div className="rowImg">
         <img src="/rowImg.png" alt="" />
       </div>
-      <div>
+      <div className="lemonade-title">
         <News />
       </div>
       <div className="flexDiv">
