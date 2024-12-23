@@ -5,6 +5,7 @@ import "./rowContainer.css";
 import "./subscribeCover.css";
 import "./scrollDiv.css";
 import "./seeMore.css";
+import "./pressCardsFlex.css";
 import { Card, CardTitle } from "./components/Card";
 import Header from "./components/Header";
 import Container from "./components/container";
@@ -14,7 +15,7 @@ import { RowContainer, PostLink } from "./components/RowContainer";
 import { Cover } from "./components/SubscribeCover";
 import ScrollSection from "./components/ScrollDiv";
 import SeeMore from "./components/SeeMore";
-import { PressCardsFlex, CardTitle } from "./components/SecondCards";
+import { PressCards, PressTitle } from "./components/PressCardsFlex.";
 
 const cards = [
   {
@@ -199,6 +200,27 @@ const scrollTitle = [
     date: "С.Ангирмаа/ 12 сарын 17, 2024",
   },
 ];
+const pressCards = [
+  {
+    img: "./monkondi.webp",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header: "Monkondi брэнд Just Chocolate-г зах зээлд нэвтрүүллээ ",
+    date: "М.Хулан/ 12 сарын 18, 2024",
+  },
+  {
+    img: "https://dash-api.yld.mn/api/image/18016e65-ab3a-447d-9469-494c3ee7cffc",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header: "Монгол бартендер дэлхийд өрсөлдлөө  ",
+    date: "М.Хулан/ 12 сарын 13, 2024",
+  },
+  {
+    img: "./football.webp",
+    category: "ХЭВЛЭЛИЙН МЭДЭЭ",
+    header:
+      "Чанарын өндөр түвшинд албан байгууллага болон оффис цэвэрлэгээний үйлчилгээ үзүүлнэ ",
+    date: "М.Хулан/ 12 сарын 12, 2024",
+  },
+];
 // const firstTitle = [
 //   { first: "Бизнес" },
 //   { first: "Хэвлэлийн мэдээ" },
@@ -286,6 +308,20 @@ function App() {
                 description={card.category}
                 header={card.header}
                 date={card.date}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div>
+        <PressTitle />
+        <div className="cardsFlex">
+          {pressCards.map((oneCard) => {
+            return (
+              <PressCards
+                description={oneCard.category}
+                info={oneCard.header}
+                date={oneCard.date}
               />
             );
           })}

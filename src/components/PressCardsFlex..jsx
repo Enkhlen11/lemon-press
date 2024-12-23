@@ -1,19 +1,19 @@
-export const CardTitle = (titleCard) => {
+export const PressTitle = (titleCard) => {
   return (
     <div className="cardsFlex">
-      <p className="card-title-width">Бизнес</p>
-      <div className="dotted"></div>
-      <p className="footer-title">Илүү үзэх</p>
+      <p className="press-title-width">ХЭВЛЭЛИЙН МЭДЭЭ</p>
+      <div className="press-dotted"></div>
+      <p className="Press-last-title">Илүү үзэх</p>
     </div>
   );
 };
-export const SecondCards = (oneCard) => {
+export const PressCards = (oneCard) => {
   return (
     <div className="card">
       <img src={oneCard.image} alt="" />
       <div className="imgHeader">
         <p className="blueWord">{oneCard.description}</p>
-        <h1>{oneCard.header}</h1>
+        <h1>{oneCard.info}</h1>
         <p>{oneCard.date}</p>
       </div>
     </div>

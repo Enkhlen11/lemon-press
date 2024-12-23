@@ -1,0 +1,11 @@
+.press-title-width {
+  font-size: 26px;
+  font-weight: 600;
+}
+.press-dotted {
+  width: 600px;
+  border-top: dotted 1px black;
+}
+.Press-last-title {
+  font-weight: 600;
+}
