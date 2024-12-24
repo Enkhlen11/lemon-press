@@ -236,11 +236,11 @@ function App() {
     <div className="container">
       <Header />
       <div className="rowImg">
-        <img src="/rowImg.png" alt="" />
+        <img src="./rowImg.png" alt="" />
       </div>
-      <div className="lemonade-title">
-        <News />
-      </div>
+
+      <News />
+
       <div className="flexDiv">
         <Container />
         <div className="plane">
