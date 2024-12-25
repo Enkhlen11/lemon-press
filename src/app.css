@@ -121,30 +121,7 @@
 }
 
 /* scroll div */
-.rowArr {
-  width: 1000px;
-  height: 500px;
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  gap: 20px;
-  margin: auto;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-.right-kondi {
-  width: 350px;
-  height: 500px;
-  border-radius: 5px;
-  border: solid 1px gray;
-}
-.scrollDiv {
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background-color: black;
-}
+
 .all-height {
   width: 780px;
   height: 540px;

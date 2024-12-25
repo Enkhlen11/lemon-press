@@ -4,9 +4,8 @@ const HeightComponent = (title) => {
       <p className="blueWord">{title.description}</p>
       <h1>{title.header}</h1>
       <p>{title.date}</p>
-      <div className="border-top-width">
-        <div className="line-border-top"> </div>
-      </div>
+
+      <div className="line-border-top"> </div>
     </div>
   );
 };
